@@ -1,0 +1,39 @@
+.step-one {
+   form {
+      label {
+         display: flex;
+         flex-direction: column;
+         gap: 6px;
+         .txt {
+            display: flex;
+            justify-content: space-between;
+            span {
+               font-family: 'regular';
+               font-size: 14px;
+            }
+            .err {
+               color: hsl(354, 84%, 57%);
+               font-family: 'medium';
+               font-size: 15px;
+            }
+         }
+         input {
+            font-family: 'medium';
+            color: hsl(213, 96%, 18%);
+            outline: none;
+            border: 1px solid hsl(229, 24%, 87%);
+            font-size: 14px;
+            padding: 13px;
+            border-radius: 8px;
+            margin-bottom: 25px;
+            &::placeholder {
+               color: hsl(231, 11%, 63%);
+               font-size: 13.5px;
+            }
+            &:focus {
+               border-color: hsl(243, 100%, 62%); 
+            }
+         }
+      }
+   }
+}
