@@ -4,6 +4,7 @@ import { schema } from "../../helper/schema";
 
 // Style
 import "./style.scss";
+import { useEffect, useRef, useState } from "react";
 
 function StepOne({ setCurrentStep }) {
    const {
@@ -22,6 +23,12 @@ function StepOne({ setCurrentStep }) {
       validationSchema: schema,
    });
 
+   const NameREF = useRef()
+
+   useEffect(() => {
+      NameREF.current.focus()
+   }, [])
+
    return (
       <>
          <div className="step-one">
@@ -38,6 +45,7 @@ function StepOne({ setCurrentStep }) {
                      )}
                   </div>
                   <input
+                     ref={NameREF}
                      style={{
                         borderColor:
                            errors?.name && touched.name
@@ -99,7 +107,7 @@ function StepOne({ setCurrentStep }) {
                <div className="btn-container">
                   <button
                      onClick={() => setCurrentStep((pre) => pre + 1)}
-                     disabled={errors.email || errors.name || errors.phone}
+                     disabled={errors.name || errors.email || errors.phone}
                      type="submit"
                   >
                      Next Step

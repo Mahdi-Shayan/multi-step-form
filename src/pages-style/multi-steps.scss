@@ -1,21 +1,24 @@
 .multi-steps-container {
-   height: 595px;
-   width: 1000px;
+   height: 585px;
+   width: 900px;
    background-color: hsl(0, 0%, 100%);
    border-radius: 12px;
    display: flex;
    color: hsl(213, 96%, 18%);
+   padding: 10px;
    .steps {
       background: url('../assets/images/bg-sidebar-desktop.svg');
       background-position: center;
       background-repeat: no-repeat;
       object-fit: cover;
+      width: 47%;
       height: 100%;
-      width: 30%;
+      overflow: hidden;
+      border-radius: 12px;
    }
    .form-container {
       padding: 50px 80px;
-
+      width: 100%;
       button[type=submit] {
          border: none;
          font-size: 12px;
