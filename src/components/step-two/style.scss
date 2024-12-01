@@ -1,0 +1,107 @@
+.step-two {
+   height: 100%;
+   position: relative;
+   .optons-container {
+      max-height: 100%;
+      display: flex;
+      gap: 19px;
+      margin-bottom: 30px;
+      .option {
+         flex: 1;
+         height: 150px;
+         overflow: hidden;
+         label {
+            height: 100%;
+            display: flex;
+            flex-direction: column;
+            justify-content: space-between;
+            padding: 12px 13px;
+   
+            border: 1px solid hsl(229, 24%, 87%);
+            border-radius: 5px;
+            transition: .3s;
+            &:hover {
+               border-color: hsl(243, 100%, 62%);
+            }
+            cursor: pointer;
+            small {
+               color: hsl(231, 11%, 63%);
+               font-size: 13px;
+            }
+         }
+         input[type=radio] {
+            display: none;
+            &:checked + label{
+               background-color: hsl(217, 100%, 97%) !important;
+               border-color: hsl(243, 100%, 62%);
+            }
+         }
+      }
+   }
+   .plan-switch {
+      position: relative;
+      display: flex;
+      justify-content: center;
+      gap: 85px;
+      width: 100%;
+      padding: 15px;
+      background-color: hsl(217, 100%, 97%);
+      border-radius: 5px;
+      .switch {
+         position: absolute;
+         left: 50%;
+         top: 50%;
+         width: 36px;
+         height: 18px;
+         border-radius: 20px;
+         transform: translate(-30%, -50%);
+         background-color: hsl(213, 96%, 18%);
+         cursor: pointer;
+         &::after {
+            position: absolute;
+            content: '';
+            height: 13px;
+            width: 13px;
+            top: 50%;
+            left: 3px;
+            transform: translateY(-50%);
+            border-radius: 100%;
+            background-color: white;
+            transition: .2s;
+         }
+      }
+      input[type=checkbox] {
+         display: none;
+         &:checked + .switch::after {
+            left: 20px;
+         }
+      }
+      h5 {
+         font-size: 13px;
+         font-family: 'regular';
+         color: hsl(231, 11%, 63%);
+         &.active {
+            color: hsl(213, 96%, 18%);
+         }
+      }
+   }
+   .btn-container {
+      position: absolute;
+      bottom: 0;
+      right: 0;
+      width: 100%;
+      display: flex;
+      justify-content: space-between;
+      .pre-step {
+         font-family: 'medium';
+         border: none;
+         background-color: transparent;
+         color: hsl(231, 11%, 63%);
+         transition: .3s;
+         cursor: pointer;
+         &:hover {
+            color: hsl(213, 96%, 18%);
+         }
+      }
+   }
+}

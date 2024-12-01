@@ -106,6 +106,7 @@ function StepOne({ setCurrentStep }) {
                </label>
                <div className="btn-container">
                   <button
+                     className="next-step"
                      onClick={() => setCurrentStep((pre) => pre + 1)}
                      disabled={errors.name || errors.email || errors.phone}
                      type="submit"
