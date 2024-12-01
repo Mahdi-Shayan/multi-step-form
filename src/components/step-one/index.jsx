@@ -5,7 +5,7 @@ import { schema } from "../../helper/schema";
 // Style
 import "./style.scss";
 
-function StepOne() {
+function StepOne({ setCurrentStep }) {
    const {
       values,
       errors,
@@ -96,6 +96,15 @@ function StepOne() {
                      onBlur={handleBlur}
                   />
                </label>
+               <div className="btn-container">
+                  <button
+                     onClick={() => setCurrentStep((pre) => pre + 1)}
+                     disabled={errors.email || errors.name || errors.phone}
+                     type="submit"
+                  >
+                     Next Step
+                  </button>
+               </div>
             </form>
          </div>
       </>

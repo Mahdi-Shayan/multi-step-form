@@ -1,0 +1,37 @@
+ul {
+   padding: 55px 45px;
+   li {
+      list-style-type: none;
+      display: flex;
+      align-items: center;
+      gap: 17px;
+      color: white;
+      font-family: 'regular';
+      margin-bottom: 35px;
+      .step-number {
+         border: 1px solid white;
+         padding: 10px;
+         border-radius: 50%;
+         width: 35px;
+         height: 35px;
+         display: flex;
+         justify-content: center;
+         align-items: center;
+         font-family: 'medium';
+         &.active {
+            background-color: hsl(206, 94%, 87%);
+            color: black;
+            border: none;
+         }
+      }
+      p {
+         font-size: 13px;
+         margin-bottom: 4px;
+         color:  hsl(231, 11%, 73%);
+      }
+      h4 {
+         letter-spacing: 2px;
+         font-size: 13px;
+      }
+   }
+}

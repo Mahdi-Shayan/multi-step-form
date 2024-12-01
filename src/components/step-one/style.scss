@@ -1,4 +1,6 @@
 .step-one {
+   height: 100%;
+   position: relative;
    form {
       label {
          display: flex;
@@ -34,6 +36,11 @@
                border-color: hsl(243, 100%, 62%); 
             }
          }
+      }
+      .btn-container {
+         position: absolute;
+         bottom: 0;
+         right: 0;
       }
    }
 }
