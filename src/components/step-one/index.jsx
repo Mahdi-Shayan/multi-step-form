@@ -1,12 +1,21 @@
 import { useFormik } from "formik";
+import { useEffect, useRef, useState } from "react";
+
+// Components
 import Header from "../global/Header";
+
+// Helpers
 import { schema } from "../../helper/schema";
+
+// Hooks
+import { useCart } from "../../hooks/useCart";
 
 // Style
 import "./style.scss";
-import { useEffect, useRef, useState } from "react";
 
 function StepOne({ setCurrentStep }) {
+   const { setCart } = useCart();
+
    const {
       values,
       errors,
@@ -23,11 +32,12 @@ function StepOne({ setCurrentStep }) {
       validationSchema: schema,
    });
 
-   const NameREF = useRef()
+   const { name, email, phone } = values;
+   const NameREF = useRef();
 
    useEffect(() => {
-      NameREF.current.focus()
-   }, [])
+      NameREF.current.focus();
+   }, []);
 
    return (
       <>
@@ -55,7 +65,7 @@ function StepOne({ setCurrentStep }) {
                      name="name"
                      type="text"
                      placeholder="e.g. Stephen King"
-                     value={values.name}
+                     value={name}
                      onChange={handleChange}
                      onBlur={handleBlur}
                   />
@@ -77,7 +87,7 @@ function StepOne({ setCurrentStep }) {
                      name="email"
                      type="email"
                      placeholder="e.g. StephenKing@lorem.com"
-                     value={values.email}
+                     value={email}
                      onChange={handleChange}
                      onBlur={handleBlur}
                   />
@@ -99,7 +109,7 @@ function StepOne({ setCurrentStep }) {
                      name="phone"
                      type="text"
                      placeholder="e.g. 09123456789"
-                     value={values.phone}
+                     value={phone}
                      onChange={handleChange}
                      onBlur={handleBlur}
                   />
@@ -107,7 +117,18 @@ function StepOne({ setCurrentStep }) {
                <div className="btn-container">
                   <button
                      className="next-step"
-                     onClick={() => setCurrentStep((pre) => pre + 1)}
+                     onClick={() => {
+                        setCurrentStep((pre) => pre + 1);
+                        setCart(
+                           {
+                              info: {
+                                 name,
+                                 email,
+                                 phone,
+                              },
+                           },
+                        );
+                     }}
                      disabled={errors.name || errors.email || errors.phone}
                      type="submit"
                   >

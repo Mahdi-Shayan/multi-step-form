@@ -1,8 +1,11 @@
 // React imports
-import { useCallback, useEffect, useMemo, useState } from "react";
+import { useEffect, useState } from "react";
 
 // Style
 import "./style.scss";
+
+// Hooks
+import { useCart } from "../../hooks/useCart";
 
 // Data
 import { options } from "../../data/data";
@@ -11,6 +14,7 @@ import { options } from "../../data/data";
 import Header from "../global/Header";
 
 function StepTwo({ setCurrentStep }) {
+   const { setCart } = useCart();
    const [duration, setDuration] = useState("mo");
    const [plan, setPlan] = useState({});
    const [order, setOrder] = useState({});
@@ -21,7 +25,7 @@ function StepTwo({ setCurrentStep }) {
          priceCents:
             duration === "mo" ? plan?.priceCents?.mo : plan.priceCents?.yr,
       });
-   }, [plan || duration]);
+   }, [duration, plan]);
 
    return (
       <>
@@ -89,7 +93,19 @@ function StepTwo({ setCurrentStep }) {
                   Go Back
                </button>
                <button
-                  onClick={() => setCurrentStep((pre) => pre + 1)}
+                  onClick={() => {
+                     setCurrentStep((pre) => pre + 1);
+                     setCart(pre => {
+                        return {
+                           ...pre,
+                           order: {
+                              name: order.name,
+                              duration,
+                              priceCents: order.priceCents
+                           }
+                        }
+                     })
+                  }}
                   className="next-step"
                   disabled={!plan.name}
                >
