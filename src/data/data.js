@@ -1,6 +1,6 @@
-import advance from '../assets/images/icon-advanced.svg'
-import arcade from '../assets/images/icon-arcade.svg'
-import pro from '../assets/images/icon-pro.svg'
+import advance from "../assets/images/icon-advanced.svg";
+import arcade from "../assets/images/icon-arcade.svg";
+import pro from "../assets/images/icon-pro.svg";
 
 export const options = [
    {
@@ -25,6 +25,33 @@ export const options = [
       priceCents: {
          mo: 1500,
          yr: 15000,
+      },
+   },
+];
+
+export const add_ons = [
+   {
+      title: "Online service",
+      des: "Access to multiplayer games",
+      priceCents: {
+         mo: 100,
+         yr: 1000,
+      },
+   },
+   {
+      title: "Larger storage",
+      des: "Extra 1TB of cloud save",
+      priceCents: {
+         mo: 200,
+         yr: 2000,
+      },
+   },
+   {
+      title: "Customizable profile",
+      des: "Custom theme on your profile",
+      priceCents: {
+         mo: 200,
+         yr: 2000,
       },
    },
 ];
