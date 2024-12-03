@@ -5,6 +5,7 @@ import Steps from "../components/global/steps";
 import StepOne from "../components/step-one";
 import StepTwo from "../components/step-two";
 import StepThree from "../components/step-three";
+import StepFour from "../components/step-four";
 
 function MultiStep() {
    const [currentStep, setCurrentStep] = useState(1)
@@ -23,8 +24,11 @@ function MultiStep() {
                   : currentStep === 2 ? (
                      <StepTwo setCurrentStep={setCurrentStep}/>
                   )
-                  : currentStep === 3 && (
+                  : currentStep === 3 ? (
                      <StepThree setCurrentStep={setCurrentStep} />
+                  )
+                  : currentStep === 4 && (
+                     <StepFour setCurrentStep={setCurrentStep}/>
                   )
                }
             </div>

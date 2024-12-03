@@ -87,7 +87,7 @@ function StepThree({ setCurrentStep }) {
                      setCart((pre) => {
                         return {
                            ...pre,
-                           service: selectedItem,
+                           services: selectedItem,
                         };
                      });
                   }}

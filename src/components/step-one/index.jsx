@@ -130,7 +130,6 @@ function StepOne({ setCurrentStep }) {
                         );
                      }}
                      disabled={errors.name || errors.email || errors.phone}
-                     type="submit"
                   >
                      Next Step
                   </button>

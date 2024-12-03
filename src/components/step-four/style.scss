@@ -1,0 +1,82 @@
+.step-four {
+   position: relative;
+   height: 100%;
+   .order-container {
+      .summary {
+         border-radius: 8px;
+         background-color: hsl(231, 100%, 99%);
+         padding: 20px;
+         p {
+            font-size: 14px;
+         }
+         .option-ordered {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            border-bottom: 1px solid hsl(229, 24%, 87%);
+            padding-bottom: 25px;
+            .option {
+               h4 {
+                  font-family: "regular";
+                  font-size: 15px;
+                  letter-spacing: 0.5px;
+                  margin-bottom: 10px;
+               }
+               .change-option-link {
+                  color: hsl(231, 11%, 63%);
+                  text-decoration: underline;
+                  cursor: pointer;
+               }
+            }
+         }
+         .services-container {
+            padding-top: 25px;
+            .service {
+               display: flex;
+               justify-content: space-between;
+               margin-bottom: 20px;
+               .name {
+                  color: hsl(231, 11%, 63%);
+               }
+            }
+         }
+      }
+   }
+   .total {
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      padding: 25px 20px;
+      p {
+         color: hsl(231, 11%, 63%);
+         font-size: 14px;
+      }
+      h3 {
+         font-size: 20px;
+         color: hsl(243, 100%, 62%);
+         font-family: "regular";
+      }
+   }
+   .btn-container {
+      position: absolute;
+      bottom: 0;
+      right: 0;
+      width: 100%;
+      display: flex;
+      justify-content: space-between;
+      .pre-step {
+         font-family: "medium";
+         border: none;
+         background-color: transparent;
+         color: hsl(231, 11%, 63%);
+         transition: 0.3s;
+         cursor: pointer;
+         &:hover {
+            color: hsl(213, 96%, 18%);
+         }
+      }
+      .next-step {
+         background-color: hsl(243, 100%, 62%) !important;
+      }
+   }
+}
