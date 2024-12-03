@@ -1,3 +1,5 @@
+@import '../../pages-style/config.scss';
+
 .step-two {
    height: 100%;
    position: relative;
@@ -17,23 +19,23 @@
             justify-content: space-between;
             padding: 12px 13px;
    
-            border: 1px solid hsl(229, 24%, 87%);
+            border: 1px solid $bg_color;
             border-radius: 5px;
             transition: .3s;
             &:hover {
-               border-color: hsl(243, 100%, 62%);
+               border-color: $neutral;
             }
             cursor: pointer;
             small {
-               color: hsl(231, 11%, 63%);
+               color: $secondary_color;
                font-size: 13px;
             }
          }
          input[type=radio] {
             display: none;
             &:checked + label{
-               background-color: hsl(217, 100%, 97%) !important;
-               border-color: hsl(243, 100%, 62%);
+               background-color: $bg_color !important;
+               border-color: $neutral;
             }
          }
       }
@@ -45,7 +47,7 @@
       gap: 85px;
       width: 100%;
       padding: 15px;
-      background-color: hsl(217, 100%, 97%);
+      background-color: $bg_color;
       border-radius: 5px;
       .switch {
          position: absolute;
@@ -55,7 +57,7 @@
          height: 18px;
          border-radius: 20px;
          transform: translate(-30%, -50%);
-         background-color: hsl(213, 96%, 18%);
+         background-color: $primary_color;
          cursor: pointer;
          &::after {
             position: absolute;
@@ -78,30 +80,11 @@
       }
       h5 {
          font-size: 13px;
-         font-family: 'regular';
-         color: hsl(231, 11%, 63%);
+         color: $secondary_color;
          &.active {
-            color: hsl(213, 96%, 18%);
+            color: $primary_color;
          }
       }
    }
-   .btn-container {
-      position: absolute;
-      bottom: 0;
-      right: 0;
-      width: 100%;
-      display: flex;
-      justify-content: space-between;
-      .pre-step {
-         font-family: 'medium';
-         border: none;
-         background-color: transparent;
-         color: hsl(231, 11%, 63%);
-         transition: .3s;
-         cursor: pointer;
-         &:hover {
-            color: hsl(213, 96%, 18%);
-         }
-      }
-   }
+   @include btn-container;
 }

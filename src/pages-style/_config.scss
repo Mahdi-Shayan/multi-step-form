@@ -1,2 +1,51 @@
-$text_color: hsl(213, 96%, 18%);
-$bg_color: hsl(217, 100%, 97%)
+$primary_color: hsl(213, 96%, 18%);
+$secondary_color: hsl(231, 11%, 63%);
+$neutral: hsl(243, 100%, 62%);
+$bg_color: hsl(217, 100%, 97%);
+$border_color: hsl(229, 24%, 87%);
+$err: hsl(354, 84%, 57%);
+
+@mixin next_step {
+   button.next-step {
+      border: none;
+      font-size: 14px;
+      padding: 13px 25px;
+      border-radius: 7px;
+      background-color: $primary_color;
+      color: hsl(0, 0%, 100%);
+      transition: .3s;
+      cursor: pointer;
+      &:hover {
+         background-color: $neutral;
+      }
+      &:disabled {
+         opacity: .7;
+         cursor: no-drop;
+         &:hover {
+            background-color: $primary_color;
+         }
+      }
+   }
+}
+@mixin btn-container {
+   .btn-container {
+      position: absolute;
+      bottom: 0;
+      right: 0;
+      width: 100%;
+      display: flex;
+      justify-content: space-between;
+      .pre-step {
+         font-family: 'medium';
+         font-size: 15px;
+         border: none;
+         background-color: transparent;
+         color: $secondary_color;
+         transition: .3s;
+         cursor: pointer;
+         &:hover {
+            color: $primary_color;
+         }
+      }
+   }
+}

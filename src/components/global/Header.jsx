@@ -5,7 +5,6 @@ function Header({ title, subtitle }) {
             <h1
                style={{
                   letterSpacing: "2px",
-                  color: "hsl(213, 96%, 18%)",
                   marginBottom: "10px",
                }}
             >

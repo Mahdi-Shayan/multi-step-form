@@ -1,10 +1,12 @@
+@import './config.scss'; 
+
 .multi-steps-container {
    height: 585px;
    width: 900px;
    background-color: hsl(0, 0%, 100%);
    border-radius: 12px;
    display: flex;
-   color: hsl(213, 96%, 18%);
+   color: $primary_color;
    padding: 10px;
    .steps {
       background: url('../assets/images/bg-sidebar-desktop.svg');
@@ -17,27 +19,9 @@
       border-radius: 12px;
    }
    .form-container {
-      padding: 50px 80px;
+      padding: 40px 80px 20px 80px;
       width: 100%;
-      button.next-step {
-         border: none;
-         font-size: 12px;
-         padding: 13px 25px;
-         border-radius: 7px;
-         background-color: hsl(213, 96%, 18%);
-         color: hsl(0, 0%, 100%);
-         transition: .3s;
-         cursor: pointer;
-         &:hover {
-            background-color: hsl(215, 90%, 35%);
-         }
-         &:disabled {
-            opacity: .7;
-            cursor: no-drop;
-            &:hover {
-               background-color: hsl(213, 96%, 18%);
-            }
-         }
-      }
+      
+      @include next_step;
    }
 }
