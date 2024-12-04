@@ -25,3 +25,45 @@
       @include next_step;
    }
 }
+@media screen and (max-width: 995px) {
+   .multi-steps-container {
+      position: relative;
+      flex-direction: column;
+      width: 410px;
+      height: 690px;
+      background-color: $bg_color;
+      .steps {
+         background: url('../assets/images/bg-sidebar-mobile.svg');
+         zoom: 1.2;
+         position: absolute;
+         background-repeat: no-repeat;
+         border-radius: 0;
+         width: 375px;
+         height: 160px;
+         z-index: 0;
+         left: 50%;
+         transform: translateX(-50%);
+         border-radius: 10px;
+         overflow: hidden;
+      }
+      .form-container {
+         padding: 5px;
+         margin-top: 114px;
+         height: 100%;
+         z-index: 1;
+         .forms {
+            padding: 30px 25px;
+            background-color: white;
+            border-radius: 10px;
+            .header {
+               margin-bottom: 30px !important;
+            }
+            button.next-step {
+               border-radius: 5px;
+               padding: 10px 15px;
+               font-size: 13px;
+            }
+         }
+      }
+   }
+}

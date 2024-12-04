@@ -46,3 +46,18 @@
       }
    }
 }
+@media screen and (max-width: 995px) {
+   label {
+      .err {
+         font-size: 14px !important;
+      }
+   }
+   input {
+      padding: 12px !important;
+      border-radius: 4px !important;
+      font-size: 13.5px  !important;
+      &::placeholder {
+         font-size: 13px !important;
+      }
+   }
+}

@@ -6,7 +6,7 @@
    .add-ons-container{
       .add {
          display: grid;
-         grid-template-columns:  40px 1fr 60px;
+         grid-template-columns:  40px 1fr 50px;
          align-items: center;
          border: 1px solid $border_color;
          border-radius: 8px;
@@ -48,4 +48,24 @@
       }
    }
    @include btn-container;
+}
+
+@media screen and (max-width: 995px) {
+   .add-ons-container {
+      .add {
+         margin-bottom: 14px !important;
+         .check-input {
+            display: flex;
+            align-items: center;
+            input[type=checkbox] {
+               zoom: 1.4 !important;
+            }
+         }
+         .description {
+            h4 {
+               margin-bottom: 3px !important;
+            }
+         }
+      }
+   }
 }

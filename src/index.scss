@@ -5,32 +5,34 @@
 }
 
 @font-face {
-   font-family: 'bold';
-   src: url('./assets/fonts/Ubuntu-Bold.ttf');
+   font-family: "bold";
+   src: url("./assets/fonts/Ubuntu-Bold.ttf");
 }
 @font-face {
-   font-family: 'medium';
-   src: url('./assets/fonts/Ubuntu-Medium.ttf');
+   font-family: "medium";
+   src: url("./assets/fonts/Ubuntu-Medium.ttf");
 }
 @font-face {
-   font-family: 'regular';
-   src: url('./assets/fonts/Ubuntu-Regular.ttf');
+   font-family: "regular";
+   src: url("./assets/fonts/Ubuntu-Regular.ttf");
 }
 
-h1, 
+h1,
 h2,
 h3,
 h4,
 h5,
 h6 {
-   font-family: 'regular';
+   font-family: "regular";
 }
 
 body {
    height: 100vh;
    background-color: hsl(217, 100%, 97%);
    position: relative;
-   font-family: 'medium';
+   font-family: "medium";
+   align-content: center;
+   overflow: hidden;
    #root,
    .App,
    .main {
@@ -43,3 +45,24 @@ body {
    }
 }
 
+@media screen and (max-width: 995px) {
+   html {
+      font-size: clamp(.8rem, 1.9vw, .9rem);
+   }
+   p {
+      font-size: 15.5px;
+   }
+   h1,
+   h2,
+   h3,
+   h4,
+   h5,
+   h6 {
+      font-family: "bold";
+      letter-spacing: 0 !important;
+   }
+   .main {
+      align-items: start !important;
+   }
+   
+}

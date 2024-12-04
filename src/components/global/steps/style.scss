@@ -35,3 +35,19 @@ ul {
       }
    }
 }
+
+@media screen and (max-width: 995px) {
+   ul {
+      display: flex;
+      justify-content: center;
+      gap: 15px;
+      .step-number {
+         width: 30px !important;
+         height: 30px !important;
+         & + div {
+            display: none !important;
+         }
+      }
+      
+   }
+}

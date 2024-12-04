@@ -49,3 +49,9 @@ $err: hsl(354, 84%, 57%);
       }
    }
 }
+@media screen and (max-width: 995px) {
+   .pre-step {
+      font-size: 15px !important;
+      font-family: 'regular' !important;
+   }
+}

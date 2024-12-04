@@ -1,7 +1,7 @@
 function Header({ title, subtitle }) {
    return (
       <>
-         <div style={{ marginBottom: "45px" }}>
+         <div className="header" style={{ marginBottom: "45px" }}>
             <h1
                style={{
                   letterSpacing: "2px",

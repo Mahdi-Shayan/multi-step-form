@@ -88,3 +88,20 @@
    }
    @include btn-container;
 }
+
+@media screen and (max-width: 995px) {
+   .optons-container {
+      display: flex;
+      flex-direction: column;
+      gap: 12px !important;
+      .option label{
+         flex-direction: row !important;
+         gap: 20px;
+         justify-content: start !important;
+         align-items: center;
+      }
+   }
+   .plan-switch {
+      padding: 14px !important;
+   }
+}
